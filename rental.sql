@@ -57,7 +57,8 @@ DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
   `adminID` varchar(45) NOT NULL,
   PRIMARY KEY (`adminID`),
-  UNIQUE KEY `adminID_UNIQUE` (`adminID`)
+  UNIQUE KEY `adminID_UNIQUE` (`adminID`),
+  CONSTRAINT `asdfgfagqe` FOREIGN KEY (`adminID`) REFERENCES `account` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -81,7 +82,8 @@ CREATE TABLE `customer` (
   `customerID` varchar(45) NOT NULL,
   `status` enum('pending','accepted','blocked') NOT NULL,
   PRIMARY KEY (`customerID`),
-  UNIQUE KEY `customerID_UNIQUE` (`customerID`)
+  UNIQUE KEY `customerID_UNIQUE` (`customerID`),
+  CONSTRAINT `dfdf` FOREIGN KEY (`customerID`) REFERENCES `account` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -206,7 +208,7 @@ CREATE TABLE `service` (
   `spID` varchar(45) NOT NULL,
   `gender` varchar(45) NOT NULL,
   `age` enum('children','teen','adult','senior') NOT NULL,
-  `occassion` varchar(45) NOT NULL,
+  `occasion` varchar(45) NOT NULL,
   PRIMARY KEY (`serviceID`),
   UNIQUE KEY `serviceID_UNIQUE` (`serviceID`),
   KEY `erueiojf_idx` (`spID`),
@@ -258,4 +260,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-28 18:22:13
+-- Dump completed on 2018-04-30 22:52:54
