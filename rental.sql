@@ -31,8 +31,8 @@ CREATE TABLE `account` (
   `lName` varchar(45) NOT NULL,
   `contactNum` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
-  `type` enum('sp','admin','customer') NOT NULL,
-  `address` varchar(45) NOT NULL,
+  `typeAccount` enum('sp','admin','customer') NOT NULL,
+  `address` varchar(100) NOT NULL,
   PRIMARY KEY (`username`),
   UNIQUE KEY `username_UNIQUE` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -44,6 +44,7 @@ CREATE TABLE `account` (
 
 LOCK TABLES `account` WRITE;
 /*!40000 ALTER TABLE `account` DISABLE KEYS */;
+INSERT INTO `account` VALUES ('1','1','1','1','1','1','admin','1'),('1234','asdf','Tangalin','asdfsadfasdf','asdf','kimlopez1999@gmail.com','sp','Lot 7, Block 7, Phase 1, Eagle Crest, Bakakeng'),('12345','asdf','sdSF','SDFSAF','ASDFSDAF','ASDFSADF','sp','ASDFSA'),('2','1','1','1','1','1','sp','1'),('3','1','1','1','1','1','customer','1'),('45654654','asdf','Tangalin','asdf','asdf','kimlopez1999@gmail.com','sp','Lot 7, Block 7, Phase 1, Eagle Crest, Bakakeng'),('5','asdf','5','5','5','5','sp','5'),('dfdasfsdf','asdfsadf','Tangalin','asdf','asdf','kimlopez1999@gmail.com','sp','Lot 7, Block 7, Phase 1, Eagle Crest, Bakakeng'),('erasergdsrg','sadfdsaf','asfdsaf','sadfsda','asdfsdf','asdfsdf','customer','sadfsdaf'),('ersafsdfa','sdfadsf','asdfadsf','asdfsdaf','ASDFSDAF','asfdsa','sp','asdfsdaf'),('lope','asfadf','asdfsad','asdfasd','asdfsadf','asdfasdf','sp','asdfsadf'),('lozerauxlopez34324','asdf','Tangalin','asdf','asdf','kimlopez1999@gmail.com','sp','Lot 7, Block 7, Phase 1, Eagle Crest, Bakakeng'),('rtdrtsdfadsf','asdfas','asdfsad','asdfsadf','asdfsadf','asdfdf','sp','asdfsdaf');
 /*!40000 ALTER TABLE `account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -58,7 +59,7 @@ CREATE TABLE `admin` (
   `adminID` varchar(45) NOT NULL,
   PRIMARY KEY (`adminID`),
   UNIQUE KEY `adminID_UNIQUE` (`adminID`),
-  CONSTRAINT `asdfgfagqe` FOREIGN KEY (`adminID`) REFERENCES `account` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `asdfgfagqe` FOREIGN KEY (`adminID`) REFERENCES `account` (`username`) ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -68,6 +69,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
+INSERT INTO `admin` VALUES ('1');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,7 +85,7 @@ CREATE TABLE `customer` (
   `status` enum('pending','accepted','blocked') NOT NULL,
   PRIMARY KEY (`customerID`),
   UNIQUE KEY `customerID_UNIQUE` (`customerID`),
-  CONSTRAINT `dfdf` FOREIGN KEY (`customerID`) REFERENCES `account` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `dfdf` FOREIGN KEY (`customerID`) REFERENCES `account` (`username`) ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -93,6 +95,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+INSERT INTO `customer` VALUES ('3','pending'),('erasergdsrg','pending');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -177,7 +180,7 @@ CREATE TABLE `report` (
   UNIQUE KEY `reportID_UNIQUE` (`reportID`),
   KEY `iiewr9_idx` (`customerID`),
   KEY `adsf23r_idx` (`spID`),
-  CONSTRAINT `adsf23r` FOREIGN KEY (`spID`) REFERENCES `service_provider` (`spID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `adsf23r` FOREIGN KEY (`spID`) REFERENCES `sp` (`spID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `iiewr9` FOREIGN KEY (`customerID`) REFERENCES `customer` (`customerID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -212,7 +215,7 @@ CREATE TABLE `service` (
   PRIMARY KEY (`serviceID`),
   UNIQUE KEY `serviceID_UNIQUE` (`serviceID`),
   KEY `erueiojf_idx` (`spID`),
-  CONSTRAINT `dflksjlf` FOREIGN KEY (`spID`) REFERENCES `service_provider` (`spID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `dflksjlf` FOREIGN KEY (`spID`) REFERENCES `sp` (`spID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -226,29 +229,30 @@ LOCK TABLES `service` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `service_provider`
+-- Table structure for table `sp`
 --
 
-DROP TABLE IF EXISTS `service_provider`;
+DROP TABLE IF EXISTS `sp`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `service_provider` (
+CREATE TABLE `sp` (
   `spID` varchar(45) NOT NULL,
   `contractBill` decimal(20,0) DEFAULT '0',
   `status` enum('pending','accepted','blocked') NOT NULL,
   PRIMARY KEY (`spID`),
   UNIQUE KEY `spID_UNIQUE` (`spID`),
-  CONSTRAINT `kjjgkhk` FOREIGN KEY (`spID`) REFERENCES `account` (`username`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `kjjgkhk` FOREIGN KEY (`spID`) REFERENCES `account` (`username`) ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `service_provider`
+-- Dumping data for table `sp`
 --
 
-LOCK TABLES `service_provider` WRITE;
-/*!40000 ALTER TABLE `service_provider` DISABLE KEYS */;
-/*!40000 ALTER TABLE `service_provider` ENABLE KEYS */;
+LOCK TABLES `sp` WRITE;
+/*!40000 ALTER TABLE `sp` DISABLE KEYS */;
+INSERT INTO `sp` VALUES ('1234',0,'pending'),('12345',0,'pending'),('2',0,'pending'),('45654654',0,'pending'),('5',0,'pending'),('dfdasfsdf',0,'pending'),('ersafsdfa',0,'pending'),('lope',0,'pending'),('lozerauxlopez34324',0,'pending'),('rtdrtsdfadsf',0,'pending');
+/*!40000 ALTER TABLE `sp` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -260,4 +264,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-30 22:52:54
+-- Dump completed on 2018-05-01 11:18:19
