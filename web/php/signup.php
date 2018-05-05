@@ -39,19 +39,11 @@ VALUES ('$_username', '$_password', '$_firstName', '$_lastName', '$_contactNum',
             echo "ERROR";
     }
 
-    /*if (!$_result) echo "INSERT failed: $_query<br>" .
-        $conn->error . "<br><br>";
-    } */
-
-    echo "Welcome " . $_username . "! Your registration has been submitted.";
+    if (!$_result){
+        $_usernameError = "Username already exists";
+        echo "$_usernameError";
+    } else echo "Welcome " . $_username . "! Your registration has been submitted.";
 }
-
-/*var setType = function(type, username){
-    switch (type){
-        case 'admin':
-    }
-}*/
-
 
 function get_post($conn, $var)
 {
