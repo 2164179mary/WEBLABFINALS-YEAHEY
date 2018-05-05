@@ -13,23 +13,38 @@ $password = $_POST['password'];
 $username = mysqli_real_escape_string($conn,$username);
 $password = mysqli_real_escape_string($conn,$password);
 
-$query = "SELECT username, password from account where username = '$username' and password = '$password'";
+$query = "SELECT username, password, typeAccount from account where username = '$username' and password = '$password'";
 $result = $conn->query($query);
 
 //if count is equal 1, register the user to logged in
 $count = mysqli_num_rows($result);
+
+for($i = 0; $i < $count; $i++){
+    $result->data_seek($i);
+    $row = $result->fetch_array(MYSQLI_ASSOC);
+
+    $_type = $row['typeAccount'];
+}
 if ($count == 1){
-    $_SESSION['username'] = $username;
-    $_SESSION['password'] = $password;
+
+    if($_type == "admin"){
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
+        header('location: ../home.php');
+    } else {
+        echo "<p>You are not allowed to login in the admin module</p>";
+        echo "<p>redirecting in 3 seconds </p>";
+        header('Refresh: 3; URL=../login.html');
+        //header('location: ../login.html');
+    }
   //  echo "You are now logged in";
-    header('location: ../home.php');
+
 }
 else {
     //header("location:../login.html");
     echo "<p> Invalid username or password </p>";
-     echo "<form>
-    <input type=\"button\" name=\"log in\" onclick=\"location.href='../index.html';\" value=\"Log in again\">
-    </form>";
+    echo "<p>redirecting in 3 seconds </p>";
+    header('Refresh: 3; URL=../login.html');
 }
-    
+
 ?>
