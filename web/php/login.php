@@ -13,7 +13,7 @@ $password = $_POST['password'];
 $username = mysqli_real_escape_string($conn,$username);
 $password = mysqli_real_escape_string($conn,$password);
 
-$query = "SELECT username, password, typeAccount from account where username = '$username' and password = '$password'";
+$query = "SELECT username, password, typeAccount from account where username = BINARY '$username' and password = BINARY '$password'";
 $result = $conn->query($query);
 
 //if count is equal 1, register the user to logged in
