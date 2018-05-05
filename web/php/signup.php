@@ -31,10 +31,6 @@ VALUES ('$_username', '$_password', '$_firstName', '$_lastName', '$_contactNum',
             $_query2 = "INSERT INTO $_type (spID, status) VALUES('$_username', 'pending')";
             $_result2 = $conn->query($_query2);
             break;
-        case 'admin':
-            $_query2 = "INSERT INTO $_type (adminID) VALUES('$_username')";
-            $_result2 = $conn->query($_query2);
-            break;
         default:
             echo "ERROR";
     }

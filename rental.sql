@@ -4,7 +4,7 @@ USE `rental`;
 --
 -- Host: localhost    Database: rental
 -- ------------------------------------------------------
--- Server version	5.7.21
+-- Server version	5.7.19-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -44,7 +44,7 @@ CREATE TABLE `account` (
 
 LOCK TABLES `account` WRITE;
 /*!40000 ALTER TABLE `account` DISABLE KEYS */;
-INSERT INTO `account` VALUES ('1','1','1','1','1','1','admin','1'),('1234','asdf','Tangalin','asdfsadfasdf','asdf','kimlopez1999@gmail.com','sp','Lot 7, Block 7, Phase 1, Eagle Crest, Bakakeng'),('12345','asdf','sdSF','SDFSAF','ASDFSDAF','ASDFSADF','sp','ASDFSA'),('2','1','1','1','1','1','sp','1'),('3','1','1','1','1','1','customer','1'),('45654654','asdf','Tangalin','asdf','asdf','kimlopez1999@gmail.com','sp','Lot 7, Block 7, Phase 1, Eagle Crest, Bakakeng'),('5','asdf','5','5','5','5','sp','5'),('dfdasfsdf','asdfsadf','Tangalin','asdf','asdf','kimlopez1999@gmail.com','sp','Lot 7, Block 7, Phase 1, Eagle Crest, Bakakeng'),('erasergdsrg','sadfdsaf','asfdsaf','sadfsda','asdfsdf','asdfsdf','customer','sadfsdaf'),('ersafsdfa','sdfadsf','asdfadsf','asdfsdaf','ASDFSDAF','asfdsa','sp','asdfsdaf'),('lope','asfadf','asdfsad','asdfasd','asdfsadf','asdfasdf','sp','asdfsadf'),('lozerauxlopez34324','asdf','Tangalin','asdf','asdf','kimlopez1999@gmail.com','sp','Lot 7, Block 7, Phase 1, Eagle Crest, Bakakeng'),('rtdrtsdfadsf','asdfas','asdfsad','asdfsadf','asdfsadf','asdfdf','sp','asdfsdaf');
+INSERT INTO `account` VALUES ('admin1','QWER','ADMIN','LOPEZ','0912e45345','kimlopez1999@gmail.com','admin','Naguilian'),('customer','QWE','customer','customer','customer123214','custome@mail','customer','asdfdsf'),('Kimo','kimo','Kimo','Lopez','0916','kimo@mail','sp','1234'),('lozeraux','1234','Kimberly','Lopez','0916','kimlopez1999@gmail.com','sp','Naguilian');
 /*!40000 ALTER TABLE `account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -69,7 +69,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES ('1');
+INSERT INTO `admin` VALUES ('admin1');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,7 +95,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES ('3','pending'),('erasergdsrg','pending');
+INSERT INTO `customer` VALUES ('customer','accepted');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -251,7 +251,7 @@ CREATE TABLE `sp` (
 
 LOCK TABLES `sp` WRITE;
 /*!40000 ALTER TABLE `sp` DISABLE KEYS */;
-INSERT INTO `sp` VALUES ('1234',0,'pending'),('12345',0,'pending'),('2',0,'pending'),('45654654',0,'pending'),('5',0,'pending'),('dfdasfsdf',0,'pending'),('ersafsdfa',0,'pending'),('lope',0,'pending'),('lozerauxlopez34324',0,'pending'),('rtdrtsdfadsf',0,'pending');
+INSERT INTO `sp` VALUES ('Kimo',0,'pending'),('lozeraux',0,'accepted');
 /*!40000 ALTER TABLE `sp` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -264,4 +264,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-01 11:18:19
+-- Dump completed on 2018-05-05 18:05:33
