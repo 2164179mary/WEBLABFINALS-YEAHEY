@@ -29,26 +29,19 @@ for ($j = 0; $j < $rows; ++$j){
 
     echo <<<_END
     <!Doctype html>
-    <body>
-    <pre>
-    Username: $row[0]
-    Given Name: $row[1]
-    Last Name: $row[2]
-    Account: $row[3]
-    Status: $row[4]
-    </pre>
+        <body>
+           <p> Username: $row[0]</p>
+           <p> Name: $row[1] $row[2]</p>
+           <p>Account: $row[3]</p>
     
-   <form action = "_____.php" method="post">
-   <input type = "hidden" name = "deny" value="yes">
-   <input type = "hidden" name= "status" value="$row[4]">
-   <input type="submit" value="Deny Request">
-   
-   <input type = "hidden" name = "accepted" value="yes">
-   <input type = "hidden" name= "status" value="$row[4]">
-   <input type="submit" value="Accept Request">
-</form>
-</body>
-</html>
+    
+        
+           <form action = "acceptDeny.php" method="post">
+               <input type="submit" name = "policy" value="Deny Request">
+               <input type="submit" name = "policy" value="Accept Request">
+           </form>
+        </body>
+    </html>
 
 _END;
 
@@ -66,3 +59,13 @@ $conn->close();
 /*update customer (type)
 set status = 'accepted'
 where (type)customerID='3';*/
+/*
+<form action = "acceptDeny.php" method="post">
+      <input type = "hidden" name = "deny" value="yes">
+       <input type = "hidden" name= "status" value="$row[4]">
+       <input type="submit" name = "policy" value="Deny Request">
+
+       <input type = "hidden" name = "accept" value="yes">
+       <input type = "hidden" name= "status" value="$row[4]">
+       <input type="submit" name = "policy" value="Accept Request">
+   </form>*/
