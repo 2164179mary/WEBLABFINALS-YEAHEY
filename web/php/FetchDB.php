@@ -5,34 +5,51 @@ if ($conn->connect_error) die($conn->connect_error);
 if (isset($_POST['policy']) &&
     isset($_POST['account']) &&
     isset ($_POST['username']) &&
-    isset ($_POST['accept']))
+    isset ($_POST['accept']) &&
+    isset ($_POST['deny']))
 
 {
     $policy = get_post($conn, 'policy');
     $account = get_post($conn, 'account');
     $username = get_post($conn, 'username');
     $accept = get_post($conn, 'accept');
+    $deny = get_post($conn, 'deny');
 
     switch ($account){
         case 'customer':
+            if($accept == true){
+
             $query1 = " UPDATE $account SET status = 'accepted' WHERE customerID = '$username';";
             $result1 = $conn->query($query1);
-            if (!$result1) die($conn->error);
+
+            }if($deny == true){
+                $query2 = "DELETE from $account where customerID = '$username';";
+                $result2 = $conn->query($query2);
+
+            }
+
             break;
 
 
         case 'sp':
-            $query1 = " UPDATE $account SET status = 'accepted' WHERE spID = '$username';";
-            $result1 = $conn->query($query1);
-            if (!$result1) die($conn->error);
+            if($accept == true){
+                $query1 = " UPDATE $account SET status = 'accepted' WHERE spID = '$username';";
+                $result1 = $conn->query($query1);
+            } if ($deny == true){
+                $query2 = "DELETE from $account where spID = '$username';";
+                $result2 = $conn->query($query2);
+
+        }
+
             break;
 
         default:
             echo "Error";
+            break;
 
     }
 
-    echo "The username: " . $username . " has been accepted";
+
 }
 
 
@@ -65,7 +82,7 @@ for ($j = 0; $j < $rows; ++$j){
                <input type="hidden" name = "username" value="$row[0]">
                <input type="hidden" name = "account" value="$row[3]">
                <input type="submit" name = "policy" value="Deny">
-               
+          
                <input type="hidden" name="accept" value="yes">
                <input type="hidden" name = "username" value="$row[0]">
                <input type="hidden" name = "account" value="$row[3]">
