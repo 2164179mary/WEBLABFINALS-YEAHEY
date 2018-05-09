@@ -44,7 +44,7 @@ CREATE TABLE `account` (
 
 LOCK TABLES `account` WRITE;
 /*!40000 ALTER TABLE `account` DISABLE KEYS */;
-INSERT INTO `account` VALUES ('admin1','QWER','ADMIN','LOPEZ','0912e45345','kimlopez1999@gmail.com','admin','Naguilian'),('customer','QWE','customer','customer','customer123214','custome@mail','customer','asdfdsf'),('Kimo','kimo','Kimo','Lopez','0916','kimo@mail','sp','1234'),('lozeraux','1234','Kimberly','Lopez','0916','kimlopez1999@gmail.com','sp','Naguilian');
+INSERT INTO `account` VALUES ('admin','1234','ADMIN','LOPEZ','0912e45345','kimlopez1999@gmail.com','admin','Naguilian'),('customer1','customer','Customer','Jackson','58903980','jackson@mail','customer','asddfdsf'),('Lorie','ferrer','Lorelie','Ferrer','w53453425','353245435@mail','sp','asdfgsdf'),('serviceProvider','service','Harry','Potter','845834894','you@mail','sp','asdfdsf');
 /*!40000 ALTER TABLE `account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -69,7 +69,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES ('admin1');
+INSERT INTO `admin` VALUES ('admin');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,7 +95,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES ('customer','accepted');
+INSERT INTO `customer` VALUES ('customer1','accepted');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -176,6 +176,7 @@ CREATE TABLE `report` (
   `description` varchar(45) NOT NULL,
   `customerID` varchar(45) NOT NULL,
   `spID` varchar(45) NOT NULL,
+  `reporter` enum('sp','customer') NOT NULL,
   PRIMARY KEY (`reportID`),
   UNIQUE KEY `reportID_UNIQUE` (`reportID`),
   KEY `iiewr9_idx` (`customerID`),
@@ -251,7 +252,7 @@ CREATE TABLE `sp` (
 
 LOCK TABLES `sp` WRITE;
 /*!40000 ALTER TABLE `sp` DISABLE KEYS */;
-INSERT INTO `sp` VALUES ('Kimo',0,'pending'),('lozeraux',0,'accepted');
+INSERT INTO `sp` VALUES ('Lorie',0,'accepted'),('serviceProvider',0,'accepted');
 /*!40000 ALTER TABLE `sp` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -264,4 +265,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-05 18:05:33
+-- Dump completed on 2018-05-09 17:53:23
