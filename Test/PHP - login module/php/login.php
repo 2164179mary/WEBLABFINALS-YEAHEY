@@ -32,18 +32,22 @@ if ($count == 1){
         $_SESSION['password'] = $password;
         header('location: ../home.php');
     } else {
-        echo "<p>You are not allowed to login in the admin module</p>";
-        echo "<p>redirecting in 3 seconds </p>";
+        echo <<<_END
+        <div class="invalid-user">
+        <p>You are not allowed to login to the admin module</p>
+        <p>redirecting in 3 seconds</p>
+        </div>
+_END;
         header('Refresh: 3; URL=../login.html');
-        //header('location: ../login.html');
     }
-  //  echo "You are now logged in";
-
 }
 else {
-    //header("location:../login.html");
-    echo "<p> Invalid username or password </p>";
-    echo "<p>redirecting in 3 seconds </p>";
+    echo <<<_END
+    <div class="invalid-user">
+    <p>Invalid username or password</p>
+    <p>redirecting in 3 seconds</p>
+    </div>
+_END;
     header('Refresh: 3; URL=../login.html');
 }
 
