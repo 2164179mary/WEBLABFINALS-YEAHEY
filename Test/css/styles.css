@@ -149,9 +149,14 @@ img.logo-login {
     display: block;
 }
 
-#divForm {
+#divForm,
+#login {
     margin-left: 19%;
     margin-right: 19%;
+}
+
+#login {
+    margin-top: 20%;
 }
 
 .col1 {
@@ -185,7 +190,8 @@ input[type=text] {
     border-radius: 3px;
 }
 
-input[type=submit] {
+input[type=submit],
+button[type=submit] {
     float: right;
     margin-top: 1em;
     border-radius: 20px;
@@ -202,7 +208,37 @@ input[type=text]:focus {
     border: 2px solid #555;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover,
+button[type=submit]:hover {
     background: #263238;
     color: white;
+}
+
+#user,
+#password {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 1.5em;
+}
+
+#user {
+    background: white url(../images/user.png) left no-repeat;
+    background-position: 4px 4px;
+    padding-left: 27px;
+}
+
+#password {
+    background: white url(../images/key.png) left no-repeat;
+    background-position: 4px 4px;
+    padding-left: 27px;
+}
+
+#login-button {
+    margin-top: 1em;
+    margin-right: 37%;
+}
+
+#account {
+    margin: 0;
 }
