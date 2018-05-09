@@ -31,27 +31,15 @@ VALUES ('$_username', '$_password', '$_firstName', '$_lastName', '$_contactNum',
             $_query2 = "INSERT INTO $_type (spID, status) VALUES('$_username', 'pending')";
             $_result2 = $conn->query($_query2);
             break;
-        case 'admin':
-            $_query2 = "INSERT INTO $_type (adminID) VALUES('$_username')";
-            $_result2 = $conn->query($_query2);
-            break;
         default:
             echo "ERROR";
     }
 
-    /*if (!$_result) echo "INSERT failed: $_query<br>" .
-        $conn->error . "<br><br>";
-    } */
-
-    echo "Welcome " . $_username . "! Your registration has been submitted.";
+    if (!$_result){
+        $_usernameError = "Username already exists";
+        echo "$_usernameError";
+    } else echo "Welcome " . $_username . "! Your registration has been submitted.";
 }
-
-/*var setType = function(type, username){
-    switch (type){
-        case 'admin':
-    }
-}*/
-
 
 function get_post($conn, $var)
 {
