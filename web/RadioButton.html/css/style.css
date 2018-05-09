@@ -1,15 +1,9 @@
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
+
 
 .radio {
   margin: 0.5rem;
 }
 .radio input[type="radio"] {
-  position: absolute;
   opacity: 0;
 }
 .radio input[type="radio"] + .radio-label:before {
