@@ -44,7 +44,7 @@ CREATE TABLE `account` (
 
 LOCK TABLES `account` WRITE;
 /*!40000 ALTER TABLE `account` DISABLE KEYS */;
-INSERT INTO `account` VALUES ('admin','1234','ADMIN','LOPEZ','0912e45345','kimlopez1999@gmail.com','admin','Naguilian'),('customer1','customer','Customer','Jackson','58903980','jackson@mail','customer','asddfdsf'),('Lorie','ferrer','Lorelie','Ferrer','w53453425','353245435@mail','sp','asdfgsdf'),('serviceProvider','service','Harry','Potter','845834894','you@mail','sp','asdfdsf');
+INSERT INTO `account` VALUES ('1234','asdf','asdf','asdf','asdf','asdf@mail','sp','asdf'),('admin','1234','ADMIN','LOPEZ','0912e45345','kimlopez1999@gmail.com','admin','Naguilian'),('c1','c1','c1','c1','c1','c1@mail','customer','c1'),('c2','c2','c2','c2','c2','c2@mail','customer','c2'),('c3','c3','c3','c3','c3','c3@mail','customer','c3'),('customer1','customer','Customer','Jackson','58903980','jackson@mail','customer','asddfdsf'),('Lorie','ferrer','Lorelie','Ferrer','w53453425','353245435@mail','sp','asdfgsdf'),('loveshgjhg','loves','loves','kakakl','0929','akak@gmail.com','sp','nka'),('s1','s1','s1','s1','s1','s1@mail','sp','s1'),('s2','s2','s2','s2','s2','s2@mail','sp','s2'),('s3','s3','s3','s3','s3','s3@mail','sp','s3'),('serviceProvider','service','Harry','Potter','845834894','you@mail','sp','asdfdsf');
 /*!40000 ALTER TABLE `account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -95,7 +95,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES ('customer1','accepted');
+INSERT INTO `customer` VALUES ('c1','accepted'),('c2','accepted'),('c3','accepted'),('customer1','accepted');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -183,7 +183,7 @@ CREATE TABLE `report` (
   KEY `adsf23r_idx` (`spID`),
   CONSTRAINT `adsf23r` FOREIGN KEY (`spID`) REFERENCES `sp` (`spID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `iiewr9` FOREIGN KEY (`customerID`) REFERENCES `customer` (`customerID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -192,6 +192,7 @@ CREATE TABLE `report` (
 
 LOCK TABLES `report` WRITE;
 /*!40000 ALTER TABLE `report` DISABLE KEYS */;
+INSERT INTO `report` VALUES (1,'did not pay','customer1','Lorie','sp'),(2,'afadsf','c1','s1','sp'),(3,'asddfadsf','c2','s2','customer'),(4,'agdsfasdlfsad','c3','s3','customer');
 /*!40000 ALTER TABLE `report` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -252,7 +253,7 @@ CREATE TABLE `sp` (
 
 LOCK TABLES `sp` WRITE;
 /*!40000 ALTER TABLE `sp` DISABLE KEYS */;
-INSERT INTO `sp` VALUES ('Lorie',0,'accepted'),('serviceProvider',0,'accepted');
+INSERT INTO `sp` VALUES ('1234',0,'pending'),('Lorie',0,'accepted'),('loveshgjhg',0,'pending'),('s1',0,'accepted'),('s2',0,'accepted'),('s3',0,'accepted'),('serviceProvider',0,'accepted');
 /*!40000 ALTER TABLE `sp` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -265,4 +266,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-09 17:53:23
+-- Dump completed on 2018-05-10  3:49:51
