@@ -34,8 +34,8 @@ if ($count == 1){
     } else {
         echo <<<_END
         <div class="invalid-user">
-        <p>You are not allowed to login to the admin module</p>
-        <p>redirecting in 3 seconds</p>
+            <p>You are not allowed to login to the admin module</p>
+            <p>redirecting in 3 seconds</p>
         </div>
 _END;
         header('Refresh: 3; URL=../login.html');
@@ -44,8 +44,8 @@ _END;
 else {
     echo <<<_END
     <div class="invalid-user">
-    <p>Invalid username or password</p>
-    <p>redirecting in 3 seconds</p>
+        <p>Invalid username or password</p>
+        <p>redirecting in 3 seconds</p>
     </div>
 _END;
     header('Refresh: 3; URL=../login.html');

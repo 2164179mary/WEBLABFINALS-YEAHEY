@@ -145,7 +145,7 @@ img.photo {
 img.logo-login {
     width: 100%;
     max-width: 100px;
-    margin: 1.5em auto 1em auto;
+    margin: 1em auto 1em auto;
     display: block;
 }
 
@@ -253,4 +253,21 @@ button[type=submit]:hover {
 
 .errorPassword {
     display: none;
+}
+
+#ePassword {
+    font-size: 12px;
+    color: #ef5350;
+    font-style: italic;
+    margin-left: 20px;
+}
+
+.invalid-user p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #37474f;
 }
