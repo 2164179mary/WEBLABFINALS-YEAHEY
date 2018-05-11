@@ -1,0 +1,62 @@
+/* css for vertical side bar navigation*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Ubuntu;
+    font-weight: bold;
+}
+
+ul{
+    padding: 0;
+}
+
+.sidebar_nav{
+    min-width: 60px;
+    max-width: 80px;
+    height: 100%;
+    background-color: #111;
+    list-style-type: none;
+    position: fixed;
+    margin: 0;
+}
+
+.sidebar_nav li{
+    padding: 10px 24px;
+}
+
+.sidebar_nav li a{
+    text-decoration: none;
+    color: #959595;
+    text-align: center;
+    padding: 10px; 
+}
+
+.sidebar_nav li a:hover{
+    color: #fff;
+}
+
+.sidebar_nav li a i{
+    margin-right:  0;
+    display: block;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.sidebar_nav li a i:hover{
+    color: #fff;
+}
+
+
+#content_container {
+    width: 90%;
+    margin-left: 120px;
+    height: 100%;
+    background-color: #000;
+    text-align: center;
+}
+
+.content{
+    color: #fff;
+    display: none;
+}
