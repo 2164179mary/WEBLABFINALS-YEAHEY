@@ -135,150 +135,6 @@ section * {
     z-index: 1;
 }
 
-.photo {
-    height: 50%;
-}
-
-img.photo {
-    margin-top: -15px;
-    margin-left: -15px;
-    height: 100%;
-    width: 100%;
-}
-
-img.logo-login {
-    width: 100%;
-    max-width: 100px;
-    margin: 1em auto 1em auto;
-    display: block;
-}
-
-#divForm,
-#login {
-    margin-left: 19%;
-    margin-right: 19%;
-}
-
-#login {
-    margin-top: 25%;
-}
-
-.col1 {
-    width: 35%;
-    float: left;
-    padding-top: 3px;
-    padding-bottom: 12px;
-    margin-right: 20px;
-    text-align: right;
-}
-
-.col2 {
-    width: 55%;
-    float: left;
-    padding-bottom: 15px;
-}
-
-.center {
-    text-align: center;
-}
-
-input[type=text],
-input[type=password],
-input[type=email] {
-    width: 90%;
-    padding-left: 10px;
-    height: 2em;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    -webkit-transition: 0.5s;
-    transition: 0.3s;
-    outline: none;
-    border-radius: 3px;
-    cursor: text;
-}
-
-input[type=submit],
-button[type=submit] {
-    float: right;
-    margin-top: 1em;
-    border-radius: 20px;
-    box-sizing: border-box;
-    outline: none;
-    border: 2px solid #263238;
-    padding: 4px 26px;
-    font-size: 16px;
-    background: #fff;
-    -webkit-transition: 0.5s;
-    cursor: pointer;
-}
-
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=email]:focus {
-    border: 2px solid #555;
-    cursor: pointer;
-}
-
-input[type=submit]:hover,
-button[type=submit]:hover {
-    background: #263238;
-    color: white;
-    cursor: pointer;
-}
-
-#user,
-#password {
-    width: 60%;
-    margin: 0 auto;
-    display: block;
-    margin-top: 1.5em;
-}
-
-#user {
-    background: white url(../images/user.png) left no-repeat;
-    background-position: 4px 4px;
-    padding-left: 27px;
-}
-
-#password {
-    background: white url(../images/key.png) left no-repeat;
-    background-position: 4px 4px;
-    padding-left: 27px;
-}
-
-#login-button {
-    margin-top: 1em;
-    margin-right: 37%;
-}
-
-#account {
-    margin: 0;
-}
-
-#errorUsername {
-    display: none;
-}
-
-.errorPassword {
-    display: none;
-}
-
-#ePassword {
-    font-size: 12px;
-    color: #ef5350;
-    font-style: italic;
-    margin-left: 20px;
-}
-
-.invalid-user p {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: #37474f;
-}
 
 /* Menu */
 
@@ -417,4 +273,16 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
     z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+    .menu {
+        height: 12%;
+    }
+    .col-3 {
+        width: 33.33%;
+    }
+    .search-button {
+        margin-bottom: -1em;
+    }
 }
