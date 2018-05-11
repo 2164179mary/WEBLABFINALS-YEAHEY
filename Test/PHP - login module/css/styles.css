@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body {
+    color: #555;
+}
+
 .row::after {
     content: "";
     clear: both;
@@ -156,7 +160,7 @@ img.logo-login {
 }
 
 #login {
-    margin-top: 20%;
+    margin-top: 25%;
 }
 
 .col1 {
@@ -190,6 +194,7 @@ input[type=email] {
     transition: 0.3s;
     outline: none;
     border-radius: 3px;
+    cursor: text;
 }
 
 input[type=submit],
@@ -204,18 +209,21 @@ button[type=submit] {
     font-size: 16px;
     background: #fff;
     -webkit-transition: 0.5s;
+    cursor: pointer;
 }
 
 input[type=text]:focus,
 input[type=password]:focus,
 input[type=email]:focus {
     border: 2px solid #555;
+    cursor: pointer;
 }
 
 input[type=submit]:hover,
 button[type=submit]:hover {
     background: #263238;
     color: white;
+    cursor: pointer;
 }
 
 #user,
@@ -270,4 +278,143 @@ button[type=submit]:hover {
     transform: translate(-50%, -50%);
     font-size: 20px;
     color: #37474f;
+}
+
+/* Menu */
+
+img.logo-menu {
+    width: 100%;
+    max-width: 170px;
+    float: left;
+}
+
+.menu {
+    display: inline-block;
+    height: 10%;
+    background-color: #263238;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: -7px;
+    position: fixed;
+}
+
+#search-button {
+    background: white url(../images/magnifying-glassa.png) left no-repeat;
+    background-position: 5px 5px;
+    padding: 10px;
+    width: 35px;
+    margin-left: 15px;
+    float: left;
+    border-radius: 0;
+    cursor: pointer;
+    height: 2.5em;
+    margin-top: -1px;
+}
+
+input[type=search] {
+    width: 50%;
+    padding-left: 10px;
+    height: 3em;
+    box-sizing: none;
+    border: 2px solid #263238;
+    -webkit-transition: 0.5s;
+    transition: 0.3s;
+    outline: none;
+    border-radius: 3px;
+    cursor: text;
+    margin: auto 0;
+}
+
+.icons ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+#right {
+    float: right;
+}
+
+#left {
+    float: left;
+}
+
+.side-a {
+    padding: 0;
+    margin-left: 10%;
+}
+
+.side-b {
+    padding: 0;
+    float: right;
+}
+
+.icons {
+    float: right;
+    margin-right: 40%;
+    margin-top: -9px;
+}
+
+.choices nav ul li a {
+    color: black;
+}
+
+.choices {
+    margin-top: .8em;
+}
+
+.choices table {
+    width: 100%;
+}
+
+.choices table tr td {
+    text-align: center;
+    width: 50%;
+    height: 6em;
+    border-bottom: 3px solid black;
+    transition: 1s ease;
+    font-size: 18px;
+}
+
+.choices table tr td:first-child:hover {
+    background-image: url(../images/);
+    color: white;
+}
+
+.choices table tr td:last-child:hover {
+    background-image: url(../images/Costumes_BG_Image.jpg);
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: #455a64;
+    color: white;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    right: 2;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    z-index: 1;
+    transition: .2ms ease;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 1;
 }
