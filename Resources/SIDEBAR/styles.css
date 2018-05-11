@@ -1,0 +1,24 @@
+#cssmenu {
+  background: #333;
+  list-style: none;
+  width: 8em;
+  height: 100em; 
+  margin-top: -1em;
+  margin-left: -1em;
+  margin-bottom: -50em;
+}
+#cssmenu li {
+  list-style: none;
+}
+#cssmenu a {
+  background: #333;
+  border-bottom: 1px solid #393939;
+  color: #ccc;
+  display: block;
+  padding: 12px;
+}
+#cssmenu a:hover {
+  background: #2580a2 url("images/hover.gif") left center no-repeat;
+  color: #fff;
+  padding-bottom: 8px;
+}
