@@ -1,5 +1,5 @@
 <?php
-
+include 'nav.php';
 require_once 'connectDB.php';
 $conn = new mysqli($lh, $un, $pw, $db);
 if ($conn->connect_error) die($conn->connect_error);
@@ -113,8 +113,8 @@ function get_post($conn, $var)
     return $conn->real_escape_string($_POST[$var]);
 }
 ?>
-<script type="text/javascript" src="../script/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="../script/script2.js"></script>
+<script type="text/javascript" src="script/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="script/script2.js"></script>
 <!--<script>
     $(document).ready(function(){
         $("form#toggleReport").submit(function(){

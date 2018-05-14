@@ -1,5 +1,5 @@
 <?php
-require_once 'php/connectDB.php';
+require_once 'connectDB.php';
 $conn = new mysqli($lh, $un, $pw, $db);
 if ($conn->connect_error) die($conn->connect_error);
 
@@ -50,8 +50,8 @@ if(isset($_POST['username']) &&
         <title>Arkila</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="./images/favicon.ico">
-        <link rel="Stylesheet" type="text/css" href="./css/styles.css">
+        <link rel="icon" type="image/png" href="images/favicon.ico">
+        <link rel="Stylesheet" type="text/css" href="css/styles.css">
     </head>
 
     <body>

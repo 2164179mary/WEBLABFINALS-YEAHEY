@@ -43,17 +43,3 @@ if (isset($_POST['policyAccept']) &&
 
 }
 
-
-/*function get_post($conn, $var)
-{
-    return $conn->real_escape_string($_POST[$var]);
-}*/
-
-/*echo <<< _END
-<!DOCTYPE html>
-<body>
-<a href="FetchDB.php"> Go back to User</a>
-
-</body>
-</html>
-_END;*/

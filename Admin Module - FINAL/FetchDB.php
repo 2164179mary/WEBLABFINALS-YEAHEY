@@ -1,4 +1,5 @@
 <?php
+include "nav.php";
 require_once 'connectDB.php';
 $conn = new mysqli($lh, $un, $pw, $db);
 if ($conn->connect_error) die($conn->connect_error);
