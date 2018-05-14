@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Insert Service</title>
+        <link rel="icon" type="image/png" href="./images/favicon.ico">
+        <link rel="Stylesheet" type="text/css" href="./css/styles.css">
+    </head>
+    <body>
+        <form id="subscribe" class="form-horizontal" role="form" method="post" action="/home/subscribe">
+            <label>Service ID:</label>
+            <input type="text" name="message" placeholder="" readonly="readonly">
+            <br>
+            <label>Price:</label>
+            <input type="number" name="price" placeholder="<%=data[0].price%>" readonly="readonly">
+            <br>
+            <label>Image:</label>
+            <img src= "data:image/png;base64, <%=new Buffer( data[0].image, 'binary' ).toString('base64')%>">
+            <br>
+            <label>Description:</label>
+            <input type="text" name="description" placeholder="<%=data[0].description%>" readonly="readonly">
+            <br>
+            <label>Category:</label>
+            <input type="text" name="category" placeholder="<%=data[0].category%>" readonly="readonly">
+            <br>
+            <label>SP Name:</label>
+            <input type="text" name="spName" value="<%=data[0].username%>" readonly="readonly">
+            <br>
+            <label>Gender:</label>
+            <input type="text" name="gender" placeholder="<%=data[0].gender%>" readonly="readonly">
+            <br>
+            <label>Age:</label>
+            <input type="text" name="age" placeholder="<%=data[0].age%>" readonly="readonly">
+            <br>
+            <label>Occasion:</label>
+            <input type="text" name="occasion" placeholder="<%=data[0].occasion%>" readonly="readonly">
+            <br>
+            <input type="submit" value="Rent">
+        </form>
+    </body>
+</html>

@@ -3,12 +3,9 @@
 
 //connect database
 
-$serverName = "localhost";
-$username = "root";
-$password = "";
-
-// Create connection
-$conn = new mysqli($serverName, $username, $password);
+require_once 'connectDB.php';
+$conn = new mysqli($lh, $un, $pw, $db);
+if ($conn->connect_error) die($conn->connect_error);
 
 // Check connection
 if ($conn->connect_error) {
@@ -21,6 +18,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
+        echo "</br>";
         echo "Service Name: " . $row["serviceName"] . " spID : " . $row["spID"] . " Gender: " . $row["gender"]. "<br>";
     }
 } else {
