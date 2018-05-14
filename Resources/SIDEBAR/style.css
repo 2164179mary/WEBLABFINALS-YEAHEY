@@ -1,62 +1,24 @@
-/* css for vertical side bar navigation*/
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Ubuntu;
-    font-weight: bold;
++#cssmenu {
+  background: #333;
+  list-style: none;
+  width: 8em;
+  height: 100em; 
+  margin-top: -1em;
+  margin-left: -1em;
+  margin-bottom: -50em;
 }
-
-ul{
-    padding: 0;
+#cssmenu li {
+  list-style: none;
 }
-
-.sidebar_nav{
-    min-width: 60px;
-    max-width: 80px;
-    height: 100%;
-    background-color: #111;
-    list-style-type: none;
-    position: fixed;
-    margin: 0;
+#cssmenu a {
+  background: #333;
+  border-bottom: 1px solid #393939;
+  color: #ccc;
+  display: block;
+  padding: 12px;
 }
-
-.sidebar_nav li{
-    padding: 10px 24px;
-}
-
-.sidebar_nav li a{
-    text-decoration: none;
-    color: #959595;
-    text-align: center;
-    padding: 10px; 
-}
-
-.sidebar_nav li a:hover{
-    color: #fff;
-}
-
-.sidebar_nav li a i{
-    margin-right:  0;
-    display: block;
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 5px;
-}
-
-.sidebar_nav li a i:hover{
-    color: #fff;
-}
-
-
-#content_container {
-    width: 90%;
-    margin-left: 120px;
-    height: 100%;
-    background-color: #000;
-    text-align: center;
-}
-
-.content{
-    color: #fff;
-    display: none;
+#cssmenu a:hover {
+  background: #2580a2 url("images/hover.gif") left center no-repeat;
+  color: #fff;
+  padding-bottom: 8px;
 }
