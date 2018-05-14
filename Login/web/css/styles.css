@@ -6,10 +6,6 @@
     box-sizing: border-box;
 }
 
-body {
-    color: #555;
-}
-
 .row::after {
     content: "";
     clear: both;
@@ -136,21 +132,20 @@ section * {
 }
 
 .photo {
-    height: 700px;
+    height: 50%;
 }
 
 img.photo {
     margin-top: -15px;
     margin-left: -15px;
-    height: 766px;
+    height: 100%;
     width: 100%;
-    position: static;
 }
 
 img.logo-login {
     width: 100%;
     max-width: 100px;
-    margin: 1em auto 1em auto;
+    margin: 1.5em auto 1em auto;
     display: block;
 }
 
@@ -161,7 +156,7 @@ img.logo-login {
 }
 
 #login {
-    margin-top: 25%;
+    margin-top: 20%;
 }
 
 .col1 {
@@ -195,7 +190,6 @@ input[type=email] {
     transition: 0.3s;
     outline: none;
     border-radius: 3px;
-    cursor: text;
 }
 
 input[type=submit],
@@ -210,25 +204,22 @@ button[type=submit] {
     font-size: 16px;
     background: #fff;
     -webkit-transition: 0.5s;
-    cursor: pointer;
 }
 
 input[type=text]:focus,
 input[type=password]:focus,
 input[type=email]:focus {
     border: 2px solid #555;
-    cursor: pointer;
 }
 
 input[type=submit]:hover,
 button[type=submit]:hover {
     background: #263238;
     color: white;
-    cursor: pointer;
 }
 
 #user,
-#password-login {
+#password {
     width: 60%;
     margin: 0 auto;
     display: block;
@@ -241,7 +232,7 @@ button[type=submit]:hover {
     padding-left: 27px;
 }
 
-#password-login {
+#password {
     background: white url(../images/key.png) left no-repeat;
     background-position: 4px 4px;
     padding-left: 27px;
@@ -262,44 +253,4 @@ button[type=submit]:hover {
 
 .errorPassword {
     display: none;
-}
-
-#ePassword {
-    font-size: 12px;
-    color: #ef5350;
-    font-style: italic;
-    margin-left: 20px;
-}
-
-.invalid-user p {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: #37474f;
-}
-
-.fade-in {
-    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-@-webkit-keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
