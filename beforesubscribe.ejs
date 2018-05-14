@@ -18,13 +18,13 @@
             <div class="col-6">
                 <div id="login">
                     <img class="logo-login" alt="logo" src="../images/sampleLogo.png">
-                    <h4 class="center" id="account">ENTER SPID</h4>
+                    <h4 class="center" id="spid">ENTER SPID</h4>
                     					<% if (message.length > 0) { %>
                                                                                     <div class="alert alert-danger col-sm-12"><%= message %></div>
                                                                         <% } %>
-                    <form id="loginform" class="form-horizontal" role="form" method="post" action="/home/beforesubscribe">
-                        <input id="login-username" type="text" class="form-control" name="serviceId" value="" placeholder="serviceId">
-                        <button id="btn-login" type="submit" class="btn btn-success">Submit  </button>
+                    <form id="beforesubscribeform" class="form-horizontal" role="form" method="post" action="/home/beforesubscribe">
+                        <input id="beforesubscribe-serviceId" type="text" class="form-control" name="serviceId" value="" placeholder="serviceId">
+                        <button id="btn-loginn" type="submit" class="btn btn-successs">Submit  </button>
                     </form>
                 </div>
             </div>

@@ -30,7 +30,7 @@ if ($count == 1){
     if($_type == "admin"){
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
-        header('location: ../home.php');
+        header('location: home.php');
     } else {
         echo <<<_END
         <div class="invalid-user">
@@ -38,7 +38,7 @@ if ($count == 1){
             <p>redirecting in 3 seconds</p>
         </div>
 _END;
-        header('Refresh: 3; URL=../loginForm.php');
+        header('Refresh: 3; URL= loginForm.php');
     }
 }
 else {
@@ -48,7 +48,7 @@ else {
         <p>redirecting in 3 seconds</p>
     </div>
 _END;
-    header('Refresh: 3; URL=../loginForm.phpd');
+    header('Refresh: 3; URL=loginForm.phpd');
 }
 
 ?>
