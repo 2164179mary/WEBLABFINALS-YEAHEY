@@ -324,25 +324,27 @@ button.dashboard:hover {
     }
 }
 
+
 /* Sidebar */
 
 #cssmenu {
     background: #263238;
     width: 10em;
-    height: 100%;
-    margin-top: -1em;
+    height: 50em;
+    margin-top: -1.5em;
     margin-left: -1em;
     list-style: none;
     color: white;
-    padding-top: 2.5em;
+    padding-top: 1em;
     padding-bottom: 3.5em;
 }
 
 #cssmenu li {
-    margin-left: -30px;
+    margin-left: -37px;
     list-style: none;
     text-align: center;
 }
+
 
 #cssmenu a {
     color: white;
@@ -356,8 +358,51 @@ button.dashboard:hover {
 
 #cssmenu a:hover,
 #cssmenu a:focus,
-#cssmenu a:active {
+#cssmenu a.active {
     background: url("./images/hover.png") right center no-repeat;
     background-position: 107% 50%;
     z-index: 1;
+}
+
+#cssmenu a.active {
+    background-color: #01579b;
+}
+
+/* Tables */
+
+table.pending-rental {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 40px auto;
+    overflow-x: auto;
+    margin-left: -30px;
+}
+
+table.pending-rental td,
+th {
+    border-bottom: 2px solid #ddd;
+    padding: 9px;
+    text-align: center;
+}
+
+table.pending-rental tr {
+    padding-right: 2em;
+}
+
+table.pending-rental tr:nth-child(even) {
+    background-color: #eceff1;
+}
+
+table.pending-rental th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #455a64;
+    color: white;
+    text-align: center;
+}
+
+input[type=submit].table {
+    float: none;
+    margin: 0 auto;
+    display: block;
 }
