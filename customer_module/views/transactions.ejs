@@ -1,0 +1,27 @@
+<%- include header %>
+	<table>
+		<% data.forEach(function(element) { %>
+			<tr>
+				<td> Service ID: </td>
+				<td> <%=element.serviceID %> </td>
+			</tr>
+			<tr>
+				<td> Customer ID: </td>
+				<td> <%=element.customerID %> </td>
+			</tr>
+			<tr>
+				<td> Request Date: </td>
+				<td> <%=element.requested %> </td>
+			</tr>
+			<tr>
+				<td> No. of days: </td>
+				<td> <%=element.noOfDays %> </td>
+			</tr>	
+			<tr>
+				<td> Status: </td>
+				<td> <%=element.status %> </td>
+			</tr>
+
+		<% }); %>
+	</table>
+<%- include footer %>

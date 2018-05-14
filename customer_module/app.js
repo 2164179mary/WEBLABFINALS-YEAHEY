@@ -34,20 +34,24 @@ app.use(session({
               secret: 'keyboard cat',
               resave: false,
               saveUninitialized: true,
-              cookie: { maxAge: 60000 }
-            }))
+              cookie: { maxAge: 3600*24 }
+            }));
  
 // development only
- 
-app.get('/', routes.index);//call for main index page
-app.get('/login', routes.index);//call for login page
-app.post('/login', user.login);//call for login post
-app.get('/home/dashboard', user.dashboard);//call for dashboard page after login
-app.get('/home/logout', user.logout);//call for logout
-app.get('/home/profile',user.profile);//to render users profile
-app.get('/home/services',user.services);//to render users services
 
-app.post('/home/search', user.search);
+ 
+app.get('/', routes.index); //call for main index page
+app.get('/login', routes.index); //call for login page
+app.post('/login', user.login); //call for login post
+app.get('/home/dashboard', user.dashboard); //call for dashboard page after login
+app.get('/home/logout', user.logout); //call for logout
+app.get('/home/profile', user.profile); //to render users profile
+app.get('/home/services', user.services); //to render users services
+app.get('/home/beforesubscribe', routes.beforesubscribe); 
+app.post('/home/beforesubscribe', user.beforesubscribe); //call for beforesubscribe
+app.post('/home/subscribe', user.subscribe); //call for subscribe
+app.post('/home/search', user.search); //search functionality
+app.get('/home/transactions', user.transactions);
 //Middleware
 app.listen(3000);
-console.log('Server running');
+console.log("Server running on port 3000");

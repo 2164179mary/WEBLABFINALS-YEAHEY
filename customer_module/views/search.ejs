@@ -8,9 +8,9 @@
 		</tr>
 
 		<tr>
+			<%console.log(element.image)%>
 			<td>image:</td>
-			<td><img src="data:image/png; base64, <%=new Buffer (element.image, 'binary').toString ('base64')%>"
-				 alt="image"></td>
+			<td><img src="data:image/png; base64 , <%=new Buffer( element.image, 'binary' ).toString('base64')%>"></td>
 		</tr>
 	<% }); %>
 	</table>

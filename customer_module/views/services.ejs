@@ -1,15 +1,15 @@
 <%- include header %>
-              <table>
-<% data.forEach(function(element) {%>
-                  <tr>
-                    <td>serviceName:</td>
-                    <td><%=element.serviceName%></td>
-                  </tr>
-                  
-                  <tr>
-                    <td>image:</td>
-                    <td><img src= "data:image/png;base64, <%=new Buffer( element.image, 'binary' ).toString('base64')%>"></td>
-                  </tr>
-<% }); %>
-                                      </table>
+  <table>
+    <% data.forEach(function(element) { %>
+      <tr>
+        <td> Service Name: </td>
+        <td> <%=element.serviceName %> </td>
+      </tr>
+      <tr>
+        <td> Image: </td>
+        <td> <img src="data:image/png; base64 , <%=new Buffer( element.image, 'binary' ).toString('base64')%>"> </td>
+      </tr>
+
+    <% }); %>
+  </table>
 <%- include footer %>
