@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78cb3141-6846-4b4c-a9bc-36917ab5c06c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/php/TMonitoring.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/php/connectDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/../web/php/connectDB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/php/ServiceMonitoring.php" beforeDir="false" afterPath="$PROJECT_DIR$/../web/php/ServiceMonitoring.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/php/TransactionM.php" beforeDir="false" afterPath="$PROJECT_DIR$/../web/php/TransactionM.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/TMonitoring.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/TMonitoring.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/connectDB.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/connectDB.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/php/connectDB.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -45,8 +41,11 @@
       <file leaf-file-name="ServiceMonitoring.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../web/php/ServiceMonitoring.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+            <state relative-caret-position="266">
+              <caret line="30" column="95" selection-start-line="30" selection-start-column="95" selection-end-line="30" selection-end-column="95" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,8 +53,11 @@
       <file leaf-file-name="TransactionM.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../web/php/TransactionM.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="96">
+              <caret line="6" column="61" lean-forward="true" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,9 +66,23 @@
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fbf2983b-2372-4ae1-94a7-6c1e6ab4ddee/console.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+              <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../web/php/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="49" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../web/home.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -79,6 +95,11 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>$_Session</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -107,8 +128,9 @@
         <option value="$PROJECT_DIR$/../web/php/connectDB.php" />
         <option value="$PROJECT_DIR$/php/connectDB.php" />
         <option value="$PROJECT_DIR$/../web/php/Transaction.php" />
-        <option value="$PROJECT_DIR$/../web/php/ServiceMonitoring.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/fbf2983b-2372-4ae1-94a7-6c1e6ab4ddee/console.sql" />
+        <option value="$PROJECT_DIR$/../web/php/login.php" />
+        <option value="$PROJECT_DIR$/../web/php/ServiceMonitoring.php" />
         <option value="$PROJECT_DIR$/../web/php/TransactionM.php" />
       </list>
     </option>
@@ -135,6 +157,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -151,7 +174,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -277,31 +299,31 @@
       <workItem from="1526064274058" duration="3780000" />
       <workItem from="1526094604695" duration="4253000" />
       <workItem from="1526268480160" duration="1224000" />
-      <workItem from="1526288179563" duration="6236000" />
+      <workItem from="1526288179563" duration="6373000" />
+      <workItem from="1526297856357" duration="5512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74131000" />
+    <option name="totallyTimeSpent" value="79780000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="13" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.32972136" />
       <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="15" />
       <window_info anchor="bottom" id="Run" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="15" />
       <window_info anchor="bottom" id="Terminal" order="16" />
-      <window_info active="true" anchor="bottom" id="Database Console" visible="true" weight="0.32972136" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.15128593" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="17" visible="true" weight="0.32972136" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15128593" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.13691376" />
       <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.37997726" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
@@ -312,28 +334,28 @@
       <window_info anchor="bottom" id="Find" order="5" weight="0.32992035" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32992035" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info active="true" anchor="bottom" id="Database Console" order="0" visible="true" weight="0.32972136" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32992035" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15128593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="8" />
-      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32992035" />
-      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32992035" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.37997726" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.13691376" />
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32972136" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.13691376" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,6 +370,16 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../web/php/TransactionM.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -541,20 +573,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../web/php/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-314" />
-      </provider>
-    </entry>
     <entry file="das://fbf2983b-2372-4ae1-94a7-6c1e6ab4ddee/schema/information_schema/view/engines">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/TMonitoring.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="das://fbf2983b-2372-4ae1-94a7-6c1e6ab4ddee/schema/information_schema/view/tables">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -570,18 +594,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../web/php/Transaction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="22" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../web/php/signup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../web/php/Transaction.php" />
     <entry file="file://$PROJECT_DIR$/TMonitoring.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -589,39 +602,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../web/home.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../web/php/FetchDB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-306" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../web/php/TransactionM.php">
+    <entry file="file://$PROJECT_DIR$/php/connectDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web/php/signup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web/home.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/fbf2983b-2372-4ae1-94a7-6c1e6ab4ddee/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+          <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/connectDB.php">
+    <entry file="file://$PROJECT_DIR$/../web/php/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="222">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="49" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../web/php/TransactionM.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="61" lean-forward="true" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../web/php/ServiceMonitoring.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        <state relative-caret-position="266">
+          <caret line="30" column="95" selection-start-line="30" selection-start-column="95" selection-end-line="30" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
