@@ -1,4 +1,5 @@
-//-----------------------------------------------login page call------------------------------------------------------
+
+//==========================| LOGIN |=============================
 exports.login = function(req, res){
    var message = '';
    var sess = req.session; 
@@ -7,13 +8,15 @@ exports.login = function(req, res){
       var post  = req.body;
       var name= post.user_name;
       var pass= post.password;
-     
+                 
       var sql="SELECT username, fName, lName, username, typeAccount FROM `account` WHERE BINARY `username`='"+name+"' and password = '"+pass+"'";                             
       db.query(sql, function(err, results){      
          if(results.length && results[0].typeAccount.toString() == 'customer'){
             req.session.userId = results[0].username;
             req.session.user = results[0];
-            console.log(results[0].id);
+
+            console.log(results[0].username + " is logged in.");
+
             res.redirect('/home/dashboard');
          }
          else{
@@ -27,14 +30,13 @@ exports.login = function(req, res){
    }
            
 };
-//-----------------------------------------------dashboard page functionality----------------------------------------------
-           
+
+//==========================| DASHBOARD |=============================
 exports.dashboard = function(req, res, next){
            
    var user =  req.session.user,   
    userId = req.session.userId;
-    console.log('dddd='+user);
-   console.log('ddd='+userId);
+
    if(userId == null){
       res.redirect("/login");
       return;
@@ -46,13 +48,15 @@ exports.dashboard = function(req, res, next){
       res.render('dashboard.ejs', {user:user});    
    });       
 };
-//------------------------------------logout functionality----------------------------------------------
+
+//==========================| LOGOUT |=============================
 exports.logout = function(req,res){
    req.session.destroy(function(err) {
       res.redirect("/login");
    })
 };
-//--------------------------------render user details after login--------------------------------
+
+//==========================| PROFILE |=============================
 exports.profile = function(req, res){
 
    var userId = req.session.userId;
@@ -66,7 +70,8 @@ exports.profile = function(req, res){
       res.render('profile.ejs',{data:result});
    });
 };
-//---------------------------------show my services----------------------------------
+
+//==========================| SHOW SERVICES |=============================
 exports.services = function(req,res){
    var userId = req.session.userId;
    if(userId == null){
@@ -79,31 +84,26 @@ exports.services = function(req,res){
       res.render('services.ejs',{data:results});
    });
 };
-//---------------------------------Before Subscribe services----------------------------------
+
+//==========================| BEFORE SUBSCRIBE SERVICES |=============================
 exports.beforesubscribe = function(req,res){
-//    console.log('hahha');
-    var message = '';
+   var message = '';
    var userId = req.session.userId;
    if(userId == null){
       res.redirect("/login");
       return;
    }
-    
-//   res.render('beforesubscribe.ejs');
-    
    if(req.method == "POST"){
       var post  = req.body;
-      var serviceId= post.serviceId;
-     
+      var serviceId = post.serviceId;
       var sql="SELECT * from service inner join sp using(spID) inner join account on spID = username WHERE `serviceID`='"+serviceId+"'";                             
-      db.query(sql, function(err, results){      
-         if(results.length>0){
-             message = serviceId;
-            res.render('subscribe.ejs', {data:results});
-             
+      db.query(sql, function(err, results){ 
+         if(results.length){
+            message = serviceId;
+            res.render('subscribe.ejs', {data:results, message: serviceId, user: userId});
          }
          else{
-            message = 'NO HJKHGJIH';
+            message = 'No such Service ID';
             res.render('beforesubscribe.ejs',{message: message});
          }
                  
@@ -112,24 +112,55 @@ exports.beforesubscribe = function(req,res){
       res.render('index.ejs',{message: message});
    }         
 };
-//---------------------------------Subscribe services----------------------------------
+
+//==========================| SUBSCRIBE SERVICES |=============================
 exports.subscribe = function(req,res){
+   var date = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+   var message = '';
    var userId = req.session.userId;
    if(userId == null){
       res.redirect("/login");
       return;
-      var sql="SELECT * from service inner join sp using(spID) inner join account on spID = username WHERE `serviceID`='"+serviceId+"'";                             
+   }
+   if(req.method == "POST") {
+      var post = req.body;
+      var serviceId = post.serviceID;
+      var noOfDays = post.noOfDays;
+
+      message = serviceId;
+      console.log("Chosen service provider is: " + message);
+
+      var sql = "INSERT INTO customer_service (serviceID, customerID, requested, noOfDays) VALUES ('"+message+"', '"+userId+"', '"+date+"', '"+noOfDays+"')";                             
       db.query(sql, function(err, results){      
-         if(results.length){
-            console.log('DONE :) <3 <3 <3');
-            res.send('donedfs');
-            
-         }
-         else{
-            message = 'NO HJKHGJIHJ';
-            res.render('beforesubscribe.ejs',{message: message});
-         }
-                 
+         if(!err){
+            console.log("New record added.");
+            res.redirect("/home/dashboard");
+            console.log("Redirecting to dashboard...");
+         } else {
+            console.log("Cannot add to record.");
+         }           
       });
-    }
+   }
+};
+
+//==========================| SEARCH |=============================
+exports.search = function(req, res) {
+
+   if(req.method == "POST") {
+      var item = req.body.search;
+
+      var sql = "SELECT serviceName, image FROM service WHERE serviceName LIKE '%"+item+"%'";
+      db.query(sql, function (err, result) {
+
+      console.log(item);
+      console.log(sql);
+      console.log(result);
+
+         if(result.length) {
+            res.render('search.ejs', {data: result});
+         } else {
+            console.log('SEARCH NOT EQUAL');
+         }   
+      });
+   }
 };
