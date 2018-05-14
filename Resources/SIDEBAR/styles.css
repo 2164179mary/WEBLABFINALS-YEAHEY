@@ -27,7 +27,8 @@
 }
 
 #cssmenu a:hover,
-#cssmenu a:focus {
+#cssmenu a:focus,
+#cssmenu a:active {
     background: url("./images/hover.png") right center no-repeat;
     background-position: 107% 50%;
     z-index: 1;
