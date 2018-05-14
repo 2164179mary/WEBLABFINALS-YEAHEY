@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
         echo " spID : " . $row["spID"] . "<br>";
         echo " Gender: " . $row["gender"] . "<br>";
         $_SESSION['spID'] = $row["serviceID"];
-        echo "<a href=\"TransactionM.php?content=".$_SESSION['spID']."\">View Transaction</a>";
+        echo "<a href=\"TransactionMonitoring.php?content=".$_SESSION['spID']."\">View Transaction</a>";
         echo "</div>";
     }
 } else {
