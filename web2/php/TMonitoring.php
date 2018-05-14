@@ -18,8 +18,15 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
+        echo "<style #tile{border: 1px solid black;}/>";
+        echo "<div class='tile'>";
         echo "</br>";
-        echo "Service Name: " . $row["serviceName"] . " spID : " . $row["spID"] . " Gender: " . $row["gender"]. "<br>";
+        echo "<br>";
+        echo $row["image"];
+        echo "Service Name: " . $row["serviceName"] . "<br>";
+        echo " spID : " . $row["spID"] . "<br>";
+        echo " Gender: " . $row["gender"] . "<br>";
+        echo "</div>";
     }
 } else {
     echo "0 results";
