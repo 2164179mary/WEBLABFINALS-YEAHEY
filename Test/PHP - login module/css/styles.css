@@ -143,7 +143,7 @@ img.photo {
     margin-top: -15px;
     margin-left: -15px;
     height: 766px;
-    width: 100%;
+    width: ;
     position: static;
 }
 
@@ -284,6 +284,11 @@ button[type=submit]:hover {
 .fade-in {
     -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.fade-inn {
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
 }
 
 @-webkit-keyframes fade-in {
