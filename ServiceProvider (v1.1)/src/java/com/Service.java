@@ -14,21 +14,25 @@ import java.sql.Blob;
  */
 public class Service {
     private String customerID;
+    private String customerName;
     private String serviceID;
     private String servicename;
-    private String price;
     private Blob image;
+    private String price;
     private String description;
     private String requested;
+    private String status;
 
-    public Service(String customerID, String serviceID, String servicename, String price, Blob image, String description, String requested) {
+    public Service(String customerID, String customerName, String serviceID, String servicename, Blob image, String price, String description, String requested, String status) {
         this.customerID = customerID;
+        this.customerName = customerName;
         this.serviceID = serviceID;
         this.servicename = servicename;
-        this.price = price;
         this.image = image;
+        this.price = price;
         this.description = description;
         this.requested = requested;
+        this.status = status;
     }
 
     public String getCustomerID() {
@@ -38,7 +42,15 @@ public class Service {
     public void setCustomerID(String customerID) {
         this.customerID = customerID;
     }
-    
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
     public String getServiceID() {
         return serviceID;
     }
@@ -55,20 +67,20 @@ public class Service {
         this.servicename = servicename;
     }
 
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
     public Blob getImage() {
         return image;
     }
 
     public void setImage(Blob image) {
         this.image = image;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 
     public String getDescription() {
@@ -86,4 +98,13 @@ public class Service {
     public void setRequested(String requested) {
         this.requested = requested;
     }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 }

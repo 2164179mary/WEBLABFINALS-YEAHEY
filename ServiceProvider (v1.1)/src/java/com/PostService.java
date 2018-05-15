@@ -77,7 +77,7 @@ public class PostService extends HttpServlet {
             int row = pst.executeUpdate();
             if (row > 0) {
                 out.println("<p>File uploaded and saved into database.</p>");
-                response.sendRedirect("home.jsp");
+                response.sendRedirect("index.jsp");
             }
         } catch (SQLException ex) {
             ex.printStackTrace();

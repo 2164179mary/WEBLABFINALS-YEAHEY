@@ -6,6 +6,6 @@
     onpageshow="if (event.persisted) noBack();" onunload="">
 <%
 session.invalidate();
-response.sendRedirect("index.jsp");
+response.sendRedirect("login.jsp");
 %>
 </BODY>
