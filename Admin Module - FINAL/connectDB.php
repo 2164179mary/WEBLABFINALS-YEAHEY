@@ -1,8 +1,8 @@
 <?php
 
 $lh = 'localhost';
-$db = 'rental';
+$db = 'rental2';
 $un = 'root';
-$pw = 'root';
+$pw = '';
 
 ?>

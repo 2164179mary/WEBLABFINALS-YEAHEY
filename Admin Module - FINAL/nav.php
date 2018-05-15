@@ -27,7 +27,7 @@
 
                     </li>
                     <li>
-                        <a href="TMonitoring.php" target="_self"><img src="images/transactions.png" alt="TRANSACTIONS"><br><p>Transaction Monitoring</p></a>
+                        <a href="ServiceProviderList.php" target="_self"><img src="images/transactions.png" alt="TRANSACTIONS"><br><p>Transaction Monitoring</p></a>
                     </li>
                     <li>
                         <a href="userManagement.php" target="_self"><img src="images/users.png" alt="USER"><br><p>User<br>Management</p></a>

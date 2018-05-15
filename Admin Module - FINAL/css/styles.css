@@ -131,8 +131,8 @@ section * {
     z-index: 1;
 }
 
-.photo {
-    height: 50%;
+.infograp {
+    margin-top: 1.5em;
 }
 
 img.photo {
@@ -356,8 +356,77 @@ button.dashboard:hover {
 
 #cssmenu a:hover,
 #cssmenu a:focus,
-#cssmenu a:active {
+#cssmenu a.active {
     background: url("../images/hover.png") right center no-repeat;
     background-position: 107% 50%;
     z-index: 1;
+}
+
+/* Tables */
+
+table.tableUser,
+table.accept-block,
+table.transaction,
+table.feedback {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 40px auto;
+    overflow-x: auto;
+}
+
+table.tableUser td,
+th,
+table.accept-block td,
+th,
+table.transaction td,
+th,
+table.feedback td,
+th {
+    border-bottom: 2px solid #ddd;
+    padding: 9px;
+    text-align: center;
+}
+
+table.tableUser tr,
+table.accept-block tr,
+table.transaction tr,
+table.feedback tr {
+    padding-right: 2em;
+}
+
+table.tableUser tr:nth-child(even),
+table.accept-block tr:nth-child(even),
+table.transaction tr:nth-child(even),
+table.feedback tr:nth-child(even) {
+    background-color: #eceff1;
+}
+
+table.tableUser th,
+table.accept-block th,
+table.transaction th,
+table.feedback th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #455a64;
+    color: white;
+    text-align: center;
+}
+
+input[type=submit].table,
+#toggleReport input[type=submit] {
+    float: none;
+    margin: 0 auto;
+    display: block;
+}
+
+table.tableUser th:nth-child(4) {
+    width: 35%;
+}
+
+table.transaction tr td a {
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-style: oblique;
+    color: #e53935;
 }

@@ -12,7 +12,8 @@ if(isset($_POST['username']) &&
     isset($_POST['address'])) {
     $_type = get_post($conn, 'type');
     $_username = get_post($conn, 'username');
-    $_password = get_post($conn, 'password');
+    $_passwords = get_post($conn, 'password');
+    $_password = password_hash($_passwords, PASSWORD_DEFAULT);
     $_firstName = get_post($conn, 'firstName');
     $_lastName = get_post($conn, 'lastName');
     $_contactNum = get_post($conn, 'contactNumber');

@@ -1,5 +1,5 @@
 <?php
-include 'nav.php';
+//include 'nav.php';
 require_once 'connectDB.php';
 $conn = new mysqli($lh, $un, $pw, $db);
 if ($conn->connect_error) die($conn->connect_error);
@@ -10,7 +10,50 @@ $rows = $result->num_rows;
 
 //echo "<table class='userManagement'>";
 echo <<<_END
-<table>
+<!DOCTYPE html>
+<body lang="en">
+
+<head>
+    <title>Arkila</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="Stylesheet" type="text/css" href="css/styles.css">
+</head>
+<div class="container">
+    <div class="content">
+        <div class="col-2">
+            <div id='cssmenu'>
+                <ul>
+                    <li>
+                        <img src="images/Arkila-Logo-1.png" alt="logo">
+                        <p>Hi, ADMIN</p>
+                        <form action="logout.php">
+                            <div>
+                                <button class="dashboard" type="submit" name="logout_user"> Logout </button>
+                            </div>
+                        </form>
+                    </li><br><br>
+                    <li>
+                        <a href="FetchDB.php" target="_self"><img src="images/dashboard.png" alt="DASHBOARD"><br><p>Dashboard</p></a>
+
+                    </li>
+                    <li>
+                        <a href="ServiceProviderList.php" target="_self"><img src="images/transactions.png" alt="TRANSACTIONS"><br><p>Transaction Monitoring</p></a>
+                    </li>
+                    <li>
+                        <a href="userManagement.php" target="_self" class="active"><img src="images/users.png" alt="USER"><br><p>User<br>Management</p></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+_END;
+
+echo <<<_END
+<div class="col-10 center">
+<h1 class="fade-in">User Feedback</h1>
+<table class="feedback fade-inn">
  <tr>
  <th>Reporter</th>
  <th>Reported</th>
@@ -76,6 +119,14 @@ for($i = 0; $i < $rows; ++$i)
 _END;
 }// end of for loop
 echo "</table>";
+echo <<<_END
+    </div>
+</div>
+ </div>
+</body>
+<html>
+_END;
+
 
 if(isset($_POST['type']) &&
     isset($_POST['reported']) &&
@@ -113,13 +164,12 @@ function get_post($conn, $var)
     return $conn->real_escape_string($_POST[$var]);
 }
 ?>
-<script type="text/javascript" src="script/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="script/script2.js"></script>
-<!--<script>
+    <script type="text/javascript" src="script/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="script/script2.js"></script>
+    <!--<script>
     $(document).ready(function(){
         $("form#toggleReport").submit(function(){
             location.reload();
         });
     });
 </script>-->
-

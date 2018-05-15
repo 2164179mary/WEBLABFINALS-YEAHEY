@@ -39,7 +39,7 @@ if (isset($_POST['policyAccept']) &&
 
     }
 
-    header('Refresh: 0; URL=FetchDB.php');
+    header("Refresh:0");
 
 }
 
