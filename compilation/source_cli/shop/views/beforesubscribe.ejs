@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Arkila</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/favicon.ico">
+    <link rel="Stylesheet" type="text/css" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="col-6">
+                <img class="photo" alt="logo" src="../images/samplePhoto3.jpg">
+            </div>
+            <div class="col-6">
+                <div id="login">
+                    <img class="logo-login" alt="logo" src="../images/sampleLogo.png">
+                    <h4 class="center" id="spid">ENTER SPID</h4>
+                    					<% if (message.length > 0) { %>
+                                                                                    <div class="alert alert-danger col-sm-12"><%= message %></div>
+                                                                        <% } %>
+                    <form id="beforesubscribeform" class="form-horizontal" role="form" method="post" action="/home/beforesubscribe">
+                        <input id="beforesubscribe-serviceId" type="text" class="form-control" name="serviceId" value="" placeholder="serviceId">
+                        <button id="btn-loginn" type="submit" class="btn btn-successs">Submit  </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

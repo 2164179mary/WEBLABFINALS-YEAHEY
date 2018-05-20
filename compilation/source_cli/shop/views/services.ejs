@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Arkila</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel='stylesheet' type='text/css' href='../css/styles.css'>
+
+    <%- include references %>
+    </head>
+
+<%- include header-user %>
+  <div class="table">
+    <% data.forEach(function(element) { %>
+    <table class="table-services">
+      <tr>
+        <td class="item"> <img src="data:image/png; base64 , <%=new Buffer( element.image, 'binary' ).toString('base64')%>"> </td>
+      </tr>
+      <tr>
+        <td class="title"> <%=element.serviceName %> </td>
+      </tr>
+      <tr>
+        <td class="title"> Php. <%=element.price %> </td>
+      </tr>
+      <tr>
+        <td class="title"> <%=element.age %> </td>
+      </tr>
+       <tr>
+        <td class="rent-btn"> 
+          <form method="post" action="/home/subscribe">
+            <label># of days to be rented: </label><input class="short" type="number" name="noOfDays" placeholder="#"/>
+            <input type="hidden" name="explore" value="<%=element.serviceID %>" />
+            <button type='submit'> RENT </button> </td>
+          </form>
+        </td>
+      </tr>
+    </table>
+    <% }); %>
+  </div>
+<%- include footer %>
+</body>
+</html>

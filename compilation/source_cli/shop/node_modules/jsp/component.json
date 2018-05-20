@@ -1,0 +1,13 @@
+{
+  "name": "jsp",
+  "repo": "juliangruber/jsp",
+  "description": "A nicer JSON.parse() with convenient error handling.",
+  "version": "0.0.2",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}

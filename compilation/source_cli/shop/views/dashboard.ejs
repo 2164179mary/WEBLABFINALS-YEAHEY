@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Arkila</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    
+    <%- include references %>
+     
+    <!--[if lt IE 9]>     
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+    
+    <%- include header-user %>
+
+      <section  class="homepage-slider" id="home-slider">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="../themes/images/carousel/1.jpg" alt="" />
+            </li>
+            <li>
+              <img src="../themes/images/carousel/1.jpg" alt="" />
+              <div class="intro">
+                <h1>ARKILA</h1>
+                <p><span>COSTUMES | ATTIRES </span></p>
+                <p><span>RENT NOW!</span></p>
+              </div>
+            </li>
+          </ul>
+        </div>      
+      </section>
+      <section class="header_text">
+        
+        <br/> ARKILA DESCRIPTION HERE
+      
+      <%- include footer %>
+      
+    </div>
+    <script src="themes/js/common.js"></script>
+    <script src="themes/js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $(document).ready(function() {
+          $('.flexslider').flexslider({
+            animation: "fade",
+            slideshowSpeed: 4000,
+            animationSpeed: 600,
+            controlNav: false,
+            directionNav: true,
+            controlsContainer: ".flex-container" // the container that holds the flexslider
+          });
+        });
+      });
+    </script>
+    </body>
+</html>

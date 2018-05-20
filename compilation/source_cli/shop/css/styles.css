@@ -1,0 +1,374 @@
+*,
+:before,
+:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #555;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+
+body {
+    font-family: 'Roboto', Arial;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.6em;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 19px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.content:before,
+.content:after {
+    display: table;
+    content: " ";
+}
+
+.content:after {
+    clear: both;
+}
+
+/* Section */
+
+section {
+    padding: 2rem 0 0 0;
+}
+
+section * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Menu */
+
+img.logo-menu {
+    width: 100%;
+    max-width: 170px;
+    float: left;
+}
+
+.menu {
+    display: inline-block;
+    height: 10%;
+    background-color: #263238;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: -7px;
+
+}
+
+#search-button {
+    background: white url(../images/magnifying-glassa.png) left no-repeat;
+    background-position: 5px 5px;
+    padding: 10px;
+    width: 35px;
+    margin-left: 15px;
+    float: left;
+    border-radius: 0;
+    cursor: pointer;
+    height: 2.5em;
+    margin-top: -1px;
+}
+
+input[type=search] {
+    width: 50%;
+    padding-left: 10px;
+    height: 3em;
+    box-sizing: none;
+    border: 2px solid #263238;
+    -webkit-transition: 0.5s;
+    transition: 0.3s;
+    outline: none;
+    border-radius: 3px;
+    cursor: text;
+    margin: auto 0;
+}
+
+.icons ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+#right {
+    float: right;
+}
+
+#left {
+    float: left;
+}
+
+.side-a {
+    padding: 0;
+    margin-left: 10%;
+}
+
+.side-b {
+    padding: 0;
+    float: right;
+}
+
+.icons {
+    float: right;
+    margin-right: 40%;
+    margin-top: -9px;
+}
+
+.choices nav ul li a {
+    color: black;
+}
+
+.choices {
+    margin-top: .8em;
+}
+
+.choices table {
+    width: 100%;
+}
+
+.choices table tr td {
+    text-align: center;
+    width: 50%;
+    height: 6em;
+    border-bottom: 3px solid black;
+    transition: 1s ease;
+    font-size: 18px;
+}
+
+.choices table tr td:first-child:hover {
+    background-image: url(../images/attire.jpg);
+    color: white;
+}
+
+.choices table tr td:last-child:hover {
+    background-image: url(../images/costumes.jpg);
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: #455a64;
+    color: white;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    right: 2;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    z-index: 1;
+    transition: .2ms ease;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 1;
+}
+
+/*Additional*/
+img.img-circle {
+    width: 50%;
+    margin-top: 0%;
+}
+
+table.table-transaction{
+    margin-top: 0%;
+    border: 2px solid green;
+    padding: 1vw;
+    margin-bottom: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3.panel-title {
+    margin-left: 15%;
+}
+
+table.table-services {
+    border: 2px solid black;
+    margin-left: 1vw;
+}
+
+td.title{
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+label, h4 {
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+td.item img {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+td.rent-btn button, #btn-login {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 27%;
+    padding: 3%;
+    font-size: 1.6vw;
+    background-color: white;
+    border: 1px solid green;
+}
+
+td.rent-btn button:hover , #btn-login:hover{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 27%;
+    padding: 3%;
+    font-size: 1.6vw;
+    background-color: green;
+    border: 1px solid green;
+    color: white;
+}
+
+input.short {
+    width: 18%;
+    height: 8%;
+    font-size: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+input#login-username, input#login-password {
+    font-size: 1.6vw;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+img.logo-login {
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+@media screen and (min-width: 1024px) {
+    .menu {
+        height: 12%;
+    }
+    .col-3 {
+        width: 33.33%;
+    }
+    .search-button {
+        margin-bottom: -1em;
+    }
+}

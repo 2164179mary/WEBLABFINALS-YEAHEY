@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Arkila: Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+<%- include references %>
+</head>
+
+<%- include header-user %>
+	<div class="table">
+		<% data.forEach(function(element) { %>
+		<table class="table-transaction">
+			<tr>
+				<td> Service ID: </td>
+				<td> <%=element.serviceID %> </td>
+			</tr>
+			<tr>
+				<td> Customer ID: </td>
+				<td> <%=element.customerID %> </td>
+			</tr>
+			<tr>
+				<td> Request Date: </td>
+				<td> <%=element.requested %> </td>
+			</tr>
+			<tr>
+				<td> No. of days: </td>
+				<td> <%=element.noOfDays %> </td>
+			</tr>	
+			<tr>
+				<td> Status: </td>
+				<td> <%=element.status %> </td>
+			</tr>
+		</table>
+
+		<% }); %>
+	</div>
+	
+<%- include footer %>
+</body>
+</html>
